@@ -113,8 +113,20 @@ const arrIcons = [
   },
 ];
 const eleContainerCards = document.querySelector(".cards-container");
-const eleSelector = document.querySelector("[name='type']");
+const eleSelector = document.querySelector("select");
 // console.log(eleSelector.value);
+
+eleSelector.options.add(new Option("All", "all"));
+eleSelector.options.add(new Option("animal", "animal"));
+eleSelector.options.add(new Option("vegetable", "vegetable"));
+eleSelector.options.add(new Option("user", "user"));
+// const animal = arrIcons.filter((obj) => {
+//   if (obj.type === "animal") {
+//     return true;
+//   }
+//   return false;
+// });
+// console.log(animal.type);
 
 for (let i = 0; i < arrIcons.length; i++) {
   objIcons = arrIcons[i];
@@ -138,10 +150,10 @@ for (let i = 0; i < arrIcons.length; i++) {
 }
 
 const cardList = document.querySelectorAll(".card");
-console.log(cardList);
+// console.log(cardList);
 
 eleSelector.onchange = function () {
-  console.log("ho cambiato");
+  // console.log("ho cambiato");
   for (let i = 0; i < arrIcons.length; i++) {
     cardList[i].classList.remove("visible");
     if (eleSelector.value === "animal" && arrIcons[i].type === "animal") {
