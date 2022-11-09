@@ -118,12 +118,19 @@ const eleSelector = document.querySelector("[name='type']");
 
 for (let i = 0; i < arrIcons.length; i++) {
   objIcons = arrIcons[i];
+  console.log(arrIcons.color);
   const eleCard = document.createElement("div");
   eleCard.classList.add("card");
   eleContainerCards.append(eleCard);
   eleCard.innerHTML += `
   <i class= "fa-solid ${objIcons.prefix}${objIcons.name}"></i>`;
-  eleCard.style.color = `${objIcons.color}`;
+  // Generiamo i colori random
+  let r, g, b;
+  r = Math.round(Math.random() * 255);
+  g = Math.round(Math.random() * 255);
+  b = Math.round(Math.random() * 255);
+  // applichiamo i colori random
+  eleCard.style.color = `rgb(${r},${g},${b})`;
   const eleName = document.createElement("div");
   eleName.classList.add("name");
   eleName.innerHTML = `${objIcons.name}`;
