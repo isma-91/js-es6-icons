@@ -118,9 +118,9 @@ const eleSelector = document.querySelector("[name='type']");
 
 for (let i = 0; i < arrIcons.length; i++) {
   objIcons = arrIcons[i];
-  console.log(arrIcons.color);
   const eleCard = document.createElement("div");
   eleCard.classList.add("card");
+  eleCard.classList.add("visible");
   eleContainerCards.append(eleCard);
   eleCard.innerHTML += `
   <i class= "fa-solid ${objIcons.prefix}${objIcons.name}"></i>`;
@@ -143,16 +143,17 @@ console.log(cardList);
 eleSelector.onchange = function () {
   console.log("ho cambiato");
   for (let i = 0; i < arrIcons.length; i++) {
+    cardList[i].classList.remove("visible");
     if (eleSelector.value === "animal" && arrIcons[i].type === "animal") {
       cardList[i].classList.add("visible");
     } else if (
       eleSelector.value === "vegetable" &&
       arrIcons[i].type === "vegetable"
     ) {
-      cardList[i].classList.remove("visible");
       cardList[i].classList.add("visible");
     } else if (eleSelector.value === "user" && arrIcons[i].type === "user") {
-      cardList[i].classList.remove("visible");
+      cardList[i].classList.add("visible");
+    } else if (eleSelector.value === "all") {
       cardList[i].classList.add("visible");
     }
   }
