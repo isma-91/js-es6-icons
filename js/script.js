@@ -117,9 +117,9 @@ const eleSelector = document.querySelector("select");
 // console.log(eleSelector.value);
 
 eleSelector.options.add(new Option("All", "all"));
-eleSelector.options.add(new Option("animal", "animal"));
-eleSelector.options.add(new Option("vegetable", "vegetable"));
-eleSelector.options.add(new Option("user", "user"));
+eleSelector.options.add(new Option("Animal", "animal"));
+eleSelector.options.add(new Option("Vegetable", "vegetable"));
+eleSelector.options.add(new Option("User", "user"));
 // const animal = arrIcons.filter((obj) => {
 //   if (obj.type === "animal") {
 //     return true;
