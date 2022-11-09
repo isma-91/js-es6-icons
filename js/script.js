@@ -138,6 +138,15 @@ eleSelector.onchange = function () {
   for (let i = 0; i < arrIcons.length; i++) {
     if (eleSelector.value === "animal" && arrIcons[i].type === "animal") {
       cardList[i].classList.add("visible");
+    } else if (
+      eleSelector.value === "vegetable" &&
+      arrIcons[i].type === "vegetable"
+    ) {
+      cardList[i].classList.remove("visible");
+      cardList[i].classList.add("visible");
+    } else if (eleSelector.value === "user" && arrIcons[i].type === "user") {
+      cardList[i].classList.remove("visible");
+      cardList[i].classList.add("visible");
     }
   }
 };
