@@ -129,3 +129,15 @@ for (let i = 0; i < arrIcons.length; i++) {
   eleName.innerHTML = `${objIcons.name}`;
   eleCard.append(eleName);
 }
+
+const cardList = document.querySelectorAll(".card");
+console.log(cardList);
+
+eleSelector.onchange = function () {
+  console.log("ho cambiato");
+  for (let i = 0; i < arrIcons.length; i++) {
+    if (eleSelector.value === "animal" && cardList[i].type === "animal") {
+      cardList[i].classList.add("hidden");
+    }
+  }
+};

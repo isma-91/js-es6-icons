@@ -42,6 +42,10 @@
   padding: 4rem 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .name {
   color: black;
   text-transform: uppercase;
