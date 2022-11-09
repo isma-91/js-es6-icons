@@ -40,10 +40,14 @@
   width: calc((100% - 2rem * 4) / 5);
   border-radius: 20px;
   padding: 4rem 0;
+  display: none;
 }
 
-.hidden {
-  display: none;
+.visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .name {
