@@ -135,7 +135,7 @@ for (let i = 0; i < arrIcons.length; i++) {
   eleCard.classList.add("visible");
   eleContainerCards.append(eleCard);
   eleCard.innerHTML += `
-  <i class= "fa-solid ${objIcons.prefix}${objIcons.name}"></i>`;
+  <i class= "${objIcons.family} ${objIcons.prefix}${objIcons.name}"></i>`;
   // Generiamo i colori random
   let r, g, b;
   r = Math.round(Math.random() * 255);
